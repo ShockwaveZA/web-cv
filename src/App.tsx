@@ -1,37 +1,37 @@
-
-/*@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}*/
-
-import {Box} from '@mui/material';
+import {Box, ThemeProvider} from '@mui/material';
 import {Cover} from './sections/Cover';
+import {Intro} from './sections/Intro';
+import {theme} from './shared/theme';
+import {Education} from './sections/Education';
+import {Experience} from './sections/Experience';
+import {Skills} from './sections/Skills';
+import {SpokenLanguages} from './sections/SpokenLanguages';
+import {Interests} from './sections/Interests';
+import {Contact} from './sections/Contact';
+import {Footer} from './sections/Footer';
 
 export const App = () => {
 
     return (
-        <Box
-            sx={{
-                display: 'flex',
-                flexDirection: 'column',
-            }}
-        >
-            <Cover />
-
-
-            {/*<a href="https://reactjs.org" target="_blank">*/}
-            {/*    <img src={reactLogo} className="logo react" alt="React logo" />*/}
-            {/*</a>*/}
-        </Box>
+        <>
+            <ThemeProvider theme={theme}>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Cover />
+                    <Intro />
+                    <Education />
+                    <Experience />
+                    <Skills />
+                    <SpokenLanguages />
+                    <Interests />
+                    <Contact />
+                    <Footer />
+                </Box>
+            </ThemeProvider>
+        </>
     )
 }

@@ -12,6 +12,7 @@ export const Cover = () => {
 
     return (
         <Box
+            id={'home'}
             sx={{
                 backgroundImage: `url(${cover_background})`,
                 backgroundPosition: 'center',
