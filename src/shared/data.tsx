@@ -70,7 +70,7 @@ export const education: IEducationItem[] = [
     },
 ];
 
-export interface IExperienceItem {
+interface IExperienceItem {
     company: string;
     title: string;
     startYear: number;
@@ -146,7 +146,7 @@ export const experience: IExperienceItem[] = [
     },
 ];
 
-export interface ISpokenLanguage {
+interface ISpokenLanguage {
     name: string;
     level: string;
 }
@@ -164,7 +164,7 @@ export const interests: string[] = [
     'Gymming',
 ]
 
-export interface IContact {
+interface IContact {
     header: string;
     content: string;
 }
