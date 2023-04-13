@@ -34,14 +34,15 @@ export const Contact = () => {
                     >
                         {contactItems.map((item, i) => (
                             <Box
+                                key={i}
                                 sx={{
                                     display: 'flex',
                                     flexDirection: 'column',
                                     gap: '16px',
                                 }}
                             >
-                                <Typography key={i} color={'text.primary'}><strong>{item.header}</strong></Typography>
-                                <Typography key={i} color={'text.secondary'}>{item.content}</Typography>
+                                <Typography color={'text.primary'}><strong>{item.header}</strong></Typography>
+                                <Typography color={'text.secondary'}>{item.content}</Typography>
                             </Box>
                         ))}
                     </Box>
