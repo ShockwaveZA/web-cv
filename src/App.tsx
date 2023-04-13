@@ -9,6 +9,7 @@ import {SpokenLanguages} from './sections/SpokenLanguages';
 import {Interests} from './sections/Interests';
 import {Contact} from './sections/Contact';
 import {Footer} from './sections/Footer';
+import {Navbar} from './components/Navbar';
 
 export const App = () => {
 
@@ -21,6 +22,7 @@ export const App = () => {
                         flexDirection: 'column',
                     }}
                 >
+                    <Navbar />
                     <Cover />
                     <Intro />
                     <Education />

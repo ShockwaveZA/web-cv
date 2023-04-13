@@ -5,7 +5,23 @@ import reactIcon from '../assets/img/react.svg';
 
 export const DATE_STARTED_WORKING = moment('2018/02/01');
 
-export interface ILanguageExperience {
+interface INavbarItem {
+    label: string;
+    id: string;
+}
+
+export const navbarItems: INavbarItem[] = [
+    { label: 'Home', id: 'home', },
+    { label: 'Intro', id: 'intro', },
+    { label: 'Education', id: 'education', },
+    { label: 'Experience', id: 'experience', },
+    { label: 'Skills', id: 'skills', },
+    { label: 'Spoken Languages', id: 'spoken-languages', },
+    { label: 'Interests', id: 'interests', },
+    { label: 'Contact', id: 'contact', },
+]
+
+interface ILanguageExperience {
     name: string;
     icon?: JSX.Element;
     startYear: number;
@@ -33,7 +49,7 @@ export const educationalExperience: string[] = [
     'PHP',
 ];
 
-export interface IEducationItem {
+interface IEducationItem {
     institution: string;
     startYear: number;
     endYear?: number;
