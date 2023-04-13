@@ -1,5 +1,15 @@
 import {Box, Typography} from '@mui/material';
 import reactLogo from '../assets/react.svg';
+import {keyframes} from '@emotion/react';
+
+const spin = keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+`;
 
 export const Footer = () => {
     return (
@@ -10,28 +20,13 @@ export const Footer = () => {
                 textAlign: 'center',
 
                 img: {
+                    animation: `${spin} infinite 20s linear`,
                     margin: '24px',
                     height: '64px',
                 },
-
-                // TODO: get working
-                '@keyframes logo-spin': {
-                    from: {
-                        transform: 'rotate(0deg)',
-                    },
-                    to: {
-                        transform: 'rotate(360deg)',
-                    },
-                },
-
-                '@media (prefers-reduced-motion: no-preference)': {
-                    'a': {
-                        animation: 'logo-spin infinite 20s linear',
-                    },
-                },
             }}
         >
-            <Typography color={'text.primary'} fontWeight={'bold'}>This CV is powered by</Typography>
+            <Typography color={'text.primary'} fontWeight={'bold'}>This CV is written in React</Typography>
             <a href="https://reactjs.org" target="_blank">
                 <img src={reactLogo} className="logo react" alt="React logo" />
             </a>
