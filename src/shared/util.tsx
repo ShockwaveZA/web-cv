@@ -3,7 +3,7 @@ import moment from 'moment';
 
 export interface ILanguageExperienceItem {
     name: string;
-    icon?: string;
+    icon?: JSX.Element;
     value: number;
     label: string;
 }
@@ -21,7 +21,7 @@ export const mapToLanguageExperienceItem = (item: ILanguageExperience): ILanguag
 
     const formatter = new Intl.RelativeTimeFormat('en');
     let label = '';
-    const getDatePart = (experience, unit): string => {
+    const getDatePart = (experience: number, unit: any): string => {
         const parts = formatter.formatToParts(unit === 'months' ? experience * 12 : experience, unit);
         const [_, ...dateParts] = parts.filter(part => part.type === 'literal' || part.type === 'integer');
         return dateParts.map(p => p.type !== 'literal' ? Math.round(Number(p.value)) : p.value).join('');

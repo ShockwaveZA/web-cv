@@ -1,5 +1,5 @@
 import {Box, Collapse, Typography, useMediaQuery, useTheme} from '@mui/material';
-import {navbarItems} from '../shared/data';
+import {INavbarItem, navbarItems} from '../shared/data';
 import {useEffect, useState} from 'react';
 import {Menu} from '@mui/icons-material';
 
@@ -20,11 +20,11 @@ export const Navbar = () => {
 
     const toggleDropdown = () => setShowDropdown(prev => !prev);
 
-    const handleNavbarClick = (item) => {
-        document.getElementById(item.id).scrollIntoView({behavior: 'smooth'});
+    const handleNavbarClick = (item: INavbarItem) => {
+        document.getElementById(item.id)?.scrollIntoView({behavior: 'smooth'});
     }
 
-    const mapNavbarItem = (navbarItem, index): JSX.Element => {
+    const mapNavbarItem = (navbarItem: INavbarItem, index: number): JSX.Element => {
         return (
             <Box
                 key={index}

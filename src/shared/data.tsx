@@ -5,7 +5,7 @@ import reactIcon from '../assets/img/react.svg';
 
 export const DATE_STARTED_WORKING = moment('2018/02/01');
 
-interface INavbarItem {
+export interface INavbarItem {
     label: string;
     id: string;
 }
@@ -21,7 +21,7 @@ export const navbarItems: INavbarItem[] = [
     { label: 'Contact', id: 'contact', },
 ]
 
-interface ILanguageExperience {
+export interface ILanguageExperience {
     name: string;
     icon?: JSX.Element;
     startYear: number;
